@@ -1,6 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNS", "DotNS\DotNS.csproj", "{B16CEA8D-B9C7-4C7C-993B-9ACE9D8D5BED}"
+#
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNS", "src\DotNS\DotNS.csproj", "{B16CEA8D-B9C7-4C7C-993B-9ACE9D8D5BED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F5495AEC-83CC-456C-A52E-7C7278E85B42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyDb.Client", "src\KeyDb.Client\KeyDb.Client.csproj", "{8F0E537F-53FA-4EE3-B43E-49925D59CA7A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +17,13 @@ Global
 		{B16CEA8D-B9C7-4C7C-993B-9ACE9D8D5BED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B16CEA8D-B9C7-4C7C-993B-9ACE9D8D5BED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B16CEA8D-B9C7-4C7C-993B-9ACE9D8D5BED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F0E537F-53FA-4EE3-B43E-49925D59CA7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F0E537F-53FA-4EE3-B43E-49925D59CA7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F0E537F-53FA-4EE3-B43E-49925D59CA7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F0E537F-53FA-4EE3-B43E-49925D59CA7A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8F0E537F-53FA-4EE3-B43E-49925D59CA7A} = {F5495AEC-83CC-456C-A52E-7C7278E85B42}
+		{B16CEA8D-B9C7-4C7C-993B-9ACE9D8D5BED} = {F5495AEC-83CC-456C-A52E-7C7278E85B42}
 	EndGlobalSection
 EndGlobal
