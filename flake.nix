@@ -9,18 +9,24 @@
       system = "x86_64-darwin";
       pkgs = nixpkgs.legacyPackages.${system};
     in {
-      devShells.x86_64-darwin.default = pkgs.mkShell {
+      devShells.x86_64-darwin.default = pkgs.mkShell rec {
+        dotnetPkgs = with pkgs; (with dotnetCorePackages; combinePackages[  
+          dotnetCorePackages.sdk_8_0
+        ]);
+
+        deps = [dotnetPkgs  ];
+
         nativeBuildInputs = with pkgs; [
-          dotnet-sdk_8
           omnisharp-roslyn
           msbuild
-        ];
+        ] ++ deps;
 
         shellHook = ''
           echo "hello to csharp dev shell"  
-          ${pkgs.dotnet-sdk_8}/bin/dotnet --version
+
         '';
 
+        DOTNET_ROOT = "${dotnetPkgs}";
         OMNISHARP_PATH =
           "${pkgs.omnisharp-roslyn}/bin/OmniSharp"; # environment variable
       };
