@@ -3,6 +3,8 @@
 ##
 ## Get latest from `dotnet new gitignore`
 
+nohup.out
+
 # Nix direnv ignore
 *.direnv
 .envrc
